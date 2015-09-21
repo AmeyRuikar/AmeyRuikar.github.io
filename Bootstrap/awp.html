@@ -20,7 +20,6 @@
 
 
 
-
   </head>
 
   <body>
@@ -50,7 +49,7 @@
         </br>
         
         <div class = "tilt">
-			<img  id="img" src="IMG.JPG?random=323527528432525.24234" alt="Smiley face" class="img-circle" width="120" heigth="120">
+			<img  id="img" src="IMG.JPG"  onload="imgLoaded(this)" alt=":)" class="img-circle" width="120" heigth="120">
 		</div>
 		</br>
         </div>
@@ -122,10 +121,7 @@
 		
 	<hr>
 	
-	<script>
-
-	 </script>
-
+	
 	<div class="container">
       <!-- Site footer -->
       <footer class="footer">
@@ -137,6 +133,15 @@
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
    
-    
+    <script>
+	function imgLoaded(img){
+    var imgWrapper = img.parentNode;
+ 
+    imgWrapper.className += imgWrapper.className ? ' loaded' : 'loaded';
+	};
+
+	 </script>
+
+
   </body>
 </html>
